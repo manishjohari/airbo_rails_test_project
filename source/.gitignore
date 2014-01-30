@@ -1,0 +1,13 @@
+.DS_Store
+.sass-cache
+/.bundle
+/log/*.log
+/tmp
+/public/system
+*.swp
+zeus.json
+custom_plan.rb
+config/database.yml
+devise.secret
+config/unicorn.conf
+*.orig

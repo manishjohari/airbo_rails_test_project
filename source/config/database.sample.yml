@@ -1,0 +1,17 @@
+global: &global
+  adapter: postgresql
+  encoding: unicode
+  pool: 20
+  min_messages: warning
+  username:
+  password:
+  host: localhost
+  port: 5432
+
+development:
+  <<: *global
+  database: airbo_development
+
+test:
+  <<: *global
+  database: airbo_test
