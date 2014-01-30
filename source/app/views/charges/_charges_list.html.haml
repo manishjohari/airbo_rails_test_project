@@ -1,0 +1,10 @@
+.charges(class = type)
+  %h1 #{type.to_s.titleize} Charges
+
+  %ul
+    - charges_per_customer.each do |customer, charges|
+      %li= customer.full_name
+
+      %ol
+        - charges.each do |charge|
+          %li== $#{charge.amount} at #{Time.zone.at charge.created}

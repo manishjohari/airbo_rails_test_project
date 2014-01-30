@@ -16,4 +16,12 @@ describe Customer do
     it { should validate_presence_of(:last_name) }
   end
 
+  describe "#full_name" do
+    let(:customer) { Customer.new(first_name: "Luke", last_name: "Skywalker") }
+
+    it "returns customer first and last names, joined by space" do
+      expect( customer.full_name ).to eq("Luke Skywalker")
+    end
+  end
+
 end

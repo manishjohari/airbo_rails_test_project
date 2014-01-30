@@ -7,11 +7,18 @@ FactoryGirl.define do
     paid      false
     refunded  false
 
-    trait :paid do
+    trait :successful do
       paid true
+      refunded false
     end
 
-    trait :refunded do
+    trait :failed do
+      paid false
+      refunded false
+    end
+
+    trait :disputed do
+      paid true
       refunded true
     end
   end
